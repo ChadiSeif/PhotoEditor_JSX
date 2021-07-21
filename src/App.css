@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+}
+
+.Container {
+  display: grid;
+  grid-template-columns: 14fr 1fr;
+  grid-template-rows: 10fr 1fr;
+  grid-template-areas:
+    "mainimage sidebar"
+    "slider sidebar";
+  grid-gap: 1px;
+  height: 100vh;
+  width: 100vw;
+}
+.mainImage {
+  grid-area: mainimage;
+  width: auto;
+  background-color: rgba(240, 128, 128, 0.425);
+  background-image: url(https://images.pexels.com/photos/9198/nature-sky-twilight-grass-9198.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgba(173, 216, 230, 0.507);
+}
+
+.sliderContainer {
+  grid-area: slider;
+  background-color: lightsalmon;
+  padding: 1rem;
+}
+.slider {
+  cursor: pointer;
+  width: 50%;
+}
+
+.SideBarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  transition: background-color 500ms;
+}
+
+.SideBarItem button {
+  margin: 1px;
+}
+
+.SideBarItem button:hover {
+  background-color: rgba(173, 216, 230, 0.2);
+}
+
+.active button {
+  background-color: rgba(173, 216, 230, 0.2);
+  color: white;
+}
